@@ -1,0 +1,111 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>「タイトル」スタイルでタイトルを書く</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="claat-sample"
+                  title="「タイトル」スタイルでタイトルを書く"
+                  environment="web"
+                  feedback-link="https://github.com/budougumi0617/claat-sample/issues">
+    
+      <google-codelab-step label="見出し1をつかうとセクションになる" duration="0">
+        <p>指定された見出しやフォントを使って記載すると、claatコマンドで所定の変換が行われる。</p>
+<h2 is-upgraded>見出し2にすると小段落になる</h2>
+<p>サンプルコードはフォントを変えておくことで記載できる。</p>
+<pre><code>// 1セルのみのテーブルを挿入し、中身をCourier Newフォントにしておくとシンタックスハイライトをしたコードになる。
+type Resource struct {
+        ID   int64    `json:&#34;id&#34; xml:&#34;id&#34;`
+        Data []string `json:&#34;data,omitempty&#34; xml:&#34;data&#34;`
+}</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="見出し1にすると新しいセクションになる。" duration="5">
+        <p>Duration: と書いて、dark gray 1（暗いグレー1）にしておくとセクションの所要時間を書くことができる。カラーパレットのどの色が対応しているのかは、マウスホバーすればどれがどんな名前の色なのかはすぐわかる。</p>
+<p class="image-container"><img style="width: 304.50px" src="img/12c740002e6e3d6.png"></p>
+<p>コマンドラインの実行結果をを示したいときは<code>Consolas</code>フォントで書くと変換される。</p>
+<p>ソースコードの場合は<code>Courier New</code>フォントで書くと変換される。これらは文中でも適用される。</p>
+<pre>$ pwd
+/Users/budougumi0617/go/src/github.com/budougumi0617/claat-sample
+$ ls
+codelab.json img          index.html</pre>
+<aside class="special"><p>ポジティブな情報は1セルのみのテーブルを作り、背景色を明るい緑3ににして書いておく</p>
+</aside>
+<aside class="warning"><p>ネガティブな情報は1セルのみのテーブルを作り、背景色を明るいオレンジ3にして書いておく</p>
+</aside>
+<h3 is-upgraded><a href="https://github.com/budougumi0617/lsas/blob/3f863d5ef9298a620bd65fb8e2698bd2d19c1b21/lsas.go#L20-L31" target="_blank">見出し3で書いておくとタイトルになる(リンク先のfavconも出る)</a></h3>
+<pre><code>// LoadConfig loads AWS setting with option.
+func LoadConfig(region string) (aws.Config, error) {
+        // FIXME Need to set flexible amount of option
+        cfg, err := external.LoadDefaultAWSConfig()
+        if err != nil {
+                return aws.Config{}, err
+        }
+        if len(region) != 0 {
+                cfg.Region = region
+        }
+        return cfg, nil
+}</code></pre>
+<p>表1: 表も普通に書ける</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p>列タイトル1</p>
+</td><td colspan="1" rowspan="1"><p>列タイトル2</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>内容</p>
+</td><td colspan="1" rowspan="1"><p>内容</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>なにか</p>
+</td><td colspan="1" rowspan="1"><p>なにか</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="最後" duration="0">
+        <p>その他にもダウンロードボタンを作ったりもできる。</p>
+<p>記法の詳細は以下のDocを確認すること。アクセス権限が必要だがリクエストをすればすぐ承認される。</p>
+<p><a href="https://g.co/codelabs/guide" target="_blank">https://g.co/codelabs/guide</a> </p>
+<p>GItHubでも見れるが、Docで見たほうが「Docとしての記述」をすぐコピペできるので効率的だ。</p>
+<p><a href="https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md" target="_blank">https://github.com/googlecodelabs/tools/blob/master/FORMAT-GUIDE.md</a> </p>
+<h2 class="checklist" is-upgraded>What you&#39;ll learn</h2>
+<ul class="checklist">
+<li>表のタイトルを「What you&#39;ll learn」として見出し2で書いておく</li>
+<li>そうすると箇条書きが箇条書きが学習したことリストになる</li>
+<li>How to run a container</li>
+<li>How to use the GCP Container Registry Service</li>
+<li>How Containers differ from Virtual machines</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+
+</body>
+</html>
